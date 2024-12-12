@@ -1,15 +1,7 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
+import { revalidate } from "@module-federation/nextjs-mf/utils";
+import type { AppContext, AppProps } from "next/app";
 import { useRouter } from "next/router";
-// import PagesMap from 'docs/pages-map';
-// const DocsPage = dynamic(() =>
-//   import("docs/pages-map").then((mod) => mod["/"]), {
-//     ssr: false
-//   }
-// )
-
-// console.log(DocsPage);
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -23,3 +15,15 @@ export default function App({ Component, pageProps }: AppProps) {
     </div>
   );
 }
+
+
+App.getInitialProps = async ({ctx}: AppContext) => {
+  if(process.env.NODE_ENV === "production") {
+    ctx?.res?.on("finish", async () => {
+      revalidate();
+    });
+  }
+
+  return { pageProps: {} };
+};
+
