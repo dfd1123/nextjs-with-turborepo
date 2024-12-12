@@ -1,11 +1,11 @@
 {
-  "name": "docs",
+  "name": "test-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3002",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
     "build": "next build",
-    "start": "next start -p 3002",
+    "start": "next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
