@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-// import DocsPage from 'docs/docs';
+// import DocsPage from 'shop/shop';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Link href="/docs">docs!!</Link>
+        <Link href="/shop">shop!!</Link>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;

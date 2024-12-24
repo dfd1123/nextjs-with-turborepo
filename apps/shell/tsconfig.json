@@ -4,7 +4,8 @@
     "skipLibCheck": false,
     "paths": {
       "@/*": ["./src/*"],
-      "@docs/*": ["../docs/src/*"]
+      "@shop/*": ["../shop/src/*"],
+      "@community/*": ["../community/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

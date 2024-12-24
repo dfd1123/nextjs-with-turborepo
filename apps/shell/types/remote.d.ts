@@ -1,2 +1,2 @@
-declare module '@docs/*';
-declare module 'test-app/page-map';
+declare module '@shop/*';
+declare module '@community/*';
